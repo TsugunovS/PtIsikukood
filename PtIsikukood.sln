@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PtIsikukood", "PtIsikukood\PtIsikukood.pyproj", "{AD78793C-45B1-4F92-A9B9-127CA6C86722}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD78793C-45B1-4F92-A9B9-127CA6C86722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD78793C-45B1-4F92-A9B9-127CA6C86722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59C26927-490F-4660-B570-A2BEA50B84E3}
+	EndGlobalSection
+EndGlobal
