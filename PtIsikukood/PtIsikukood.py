@@ -89,4 +89,4 @@ print(isikukoodid)
 arvud=list(map(int,arvud))
 arvud.sort()
 print(arvud)
-#Создание пользовательских функций
+#Создание пользовательских функций.
