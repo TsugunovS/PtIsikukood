@@ -45,7 +45,7 @@ def Sunnikoht(a:int)->str:
 
 
 def Sünnipaev(ik_list:list)->str:
-    """
+    """сортировка
     """
     s1=int(ik_list[0])
     y=ik_list[1]+ik_list[2] #aasta
