@@ -74,7 +74,7 @@ while True:
 
                 #
                 sugu=Sugu(ik_list)
-                print(f"See in {sugu}, sünnipäev {spaev}. Ta on sündinud {haigla}")
+                print(f"See on {sugu}, sünnipäev {spaev}. Ta on sündinud {haigla}")
                 isikukoodid.append(ik)
 
 while True:
@@ -85,8 +85,8 @@ while True:
     arvud.sort()
     print(arvud)
 
-
 print(isikukoodid)
 arvud=list(map(int,arvud))
 arvud.sort()
 print(arvud)
+#Создание пользовательских функций
