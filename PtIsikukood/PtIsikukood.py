@@ -1,5 +1,8 @@
 ﻿from math import * 
 from random import * 
+from module2 import * 
+
+#03/02/23
 arvud=[]
 isikukoodid=[]
 
@@ -18,60 +21,70 @@ while True:
             arvud.append(ik)
         else:
             print("Esimene sümbol on õige")
-            y=ik_list[1]+ik_list[2] #aasta
-            m=ik_list[3]+ik_list[4] #kuu
-            d=ik_list[5]+ik_list[6] #päev
-            if (int(m)<1 or int(m)>13) and (int(d)<1 or int(d)>31):
-                print("Sünnipäev ei saa luua")
+            spaev=Sünnipaev(ik_list)
+            if spaev=="Viga":
                 arvud.append(ik)
             else:
-                if s1==1 or s1==2:
-                    yy="18"
-                elif s1==3 or s1==4:
-                    yy="19"
-                else:
-                    yy="20"
-                spaev=str(d)+"."+str(m)+"."+yy+str(y) #ei ole 18...,19...,20...
+                #
                 print(f"Sünnipäev on {spaev}")
                 print(f"Viimane number: ,{ik_list}")
                 kontrollnr=0
+                a1=int(ik[0])*1
+                b1=int(ik[1])*2
+                b2=int(ik[2])*3
+                b3=int(ik[3])*4
+                b4=int(ik[4])*5
+                b5=int(ik[5])*6
+                b6=int(ik[6])*7
+                b7=int(ik[7])*8
+                b8=int(ik[8])*9
+                b9=int(ik[9])*1
+
+                s11=b1+a1+b2+b3+b4+b5+b6+b7+b8+b9
+                print(s11)
+                s=s11//11
+                print(s)
+                p=s*11
+                p1=s11-p
+                if p1==int(ik[10]):
+                    print(p1)
+                else:
+                    a1=int(ik[0])*3
+                    b1=int(ik[1])*4
+                    b2=int(ik[2])*5
+                    b3=int(ik[3])*6
+                    b4=int(ik[4])*7
+                    b5=int(ik[5])*8
+                    b6=int(ik[6])*9
+                    b7=int(ik[7])*1
+                    b8=int(ik[8])*2
+                    b9=int(ik[9])*3
+                    s11=b1+a1+b2+b3+b4+b5+b6+b7+b8+b9
+                    print(s11)
+                    s=s11//11
+                    print(s)
+                    p=s*11
+                    p1=s11-p
+                    print(p1)
+
 
                 hhh=int(ik_list[8]+ik_list[9]+ik_list[10])
-                if 1<=hhh<=10:
-                    haigla="kuresaare Haigla"
-                elif 11<=hhh<=19:
-                    haigla="Tartu Ülikooli Naistekliinik, Tartumaa, Tartu"
-                elif 21<=hhh<=220:
-                    haigla="Ida-Tallinna Keskhaigla, Pelgulinna sünnitusmaja, Hiiumaa, Keila, Rapla haigla, Loksa haigla"
-                elif 221<=hhh<=270:
-                    haigla="Ida-Viru Keskhaigla (Kohtla-Järve, endine Jõhvi)"
-                elif 271<=hhh<=370:
-                    haigla="Maarjamõisa Kliinikum (Tartu), Jõgeva Haigla"
-                elif 371<=hhh<=420:
-                    haigla="Narva Haigla"
-                elif 421<=hhh<=470:
-                    haigla="Pärnu Haigla"
-                elif 471<=hhh<=490:
-                    haigla="Pelgulinna Sünnitusmaja (Tallinn), Haapsalu haigla"
-                elif 491<=hhh<=520:
-                    haigla("Järvamaa Haigla (Paide)")
-                elif 521<=hhh<=570:
-                    haigla("Rakvere, Tapa haigla")
-                elif 571<=hhh<=600:
-                    haigla("Valga Haigla")
-                elif 601<=hhh<=650:
-                    haigla("601...650")
-                elif 651<=hhh<=700:
-                    haigla("Lõuna-Eesti Haigla (Võru), Põlva Haigla")
-                else:
-                    haigla=" "
+                #
+                haigla=Sunnikoht(hhh)
 
-                if int(ik_list[0])%2==0:
-                    sugu="naine"
-                else:
-                    sugu="mees"
-                print(f"See in {sugu}, sünnipäev{spaev}. Ta on sündinud {haigla}")
+                #
+                sugu=Sugu(ik_list)
+                print(f"See in {sugu}, sünnipäev {spaev}. Ta on sündinud {haigla}")
                 isikukoodid.append(ik)
+
+while True:
+    print(isikukoodid)
+    isikukoodid=naised_mehed(isikukoodid)
+    print(isikukoodid)
+    arvud=list(map(int, arvud))
+    arvud.sort()
+    print(arvud)
+
 
 print(isikukoodid)
 arvud=list(map(int,arvud))
